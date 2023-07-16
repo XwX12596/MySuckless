@@ -67,7 +67,7 @@ static const struct arg args[] = {
 	/* function format          argument */
 	 /*{ uptime,         "%s | ",           NULL},*/
   { netspeed_rx,         "| 󰓅  %sB | ",           "wlp44s0"},
-  { wifi_essid, " \uf1eb  %s | ", "wlp44s0"},
+  { wifi_essid, "\uf1eb  %s | ", "wlp44s0"},
   /*{ ipv4        ,"%s | ", "wlp44s0"},*/
   { battery_perc        ,"󱊣 %s | ", "BAT0"},
   // {cpu_freq, "\uf4bc  %sHz | ", NULL},
