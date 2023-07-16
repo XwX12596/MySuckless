@@ -66,13 +66,13 @@ static const char unknown_str[] = "n/a";
 static const struct arg args[] = {
 	/* function format          argument */
 	 /*{ uptime,         "%s | ",           NULL},*/
+  { wifi_essid, " \uf1eb  %s | ", "wlp44s0"},
   { netspeed_rx,         "%sB | ",           "wlp44s0"},
-  { wifi_essid, "%s | ", "wlp44s0"},
   /*{ ipv4        ,"%s | ", "wlp44s0"},*/
-  { battery_perc        ,"bat %s | ", "BAT0"},
-  {cpu_freq, "%sHz | ", NULL},
-  {temp, "%s Deg | ", "/sys/class/thermal/thermal_zone0/temp"},
-  { run_command, "vol %s | ", "amixer sget Master | awk -F \"[][]\" '/Left:/{print $2}'" },
-  { run_command, "BT %s | ", "bluetooth | awk '{print $3}'" },
+  { battery_perc        ,"󱊣 %s | ", "BAT0"},
+  {cpu_freq, "\uf4bc  %sHz | ", NULL},
+  // {temp, "%s 󰔄 | ", "/sys/class/thermal/thermal_zone0/temp"},
+  { run_command, "\uf027 %s | ", "amixer sget Master | awk -F \"[][]\" '/Left:/{print $2}'" },
+  { run_command, " %s | ", "bluetooth | awk '{print $3}'" },
 	{ datetime, "%s",           "%F %T" },
 };
