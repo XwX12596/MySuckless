@@ -107,7 +107,9 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
   { 0,           0x1008ff12,spawn,   SHCMD("amixer sset Master toggle") },
   { 0,           0x1008ff11,spawn,   SHCMD("amixer sset Master 5%- ") },
-  { 0,           0x1008ff13,spawn,   SHCMD("amixer sset Master 5%+ ") }
+  { 0,           0x1008ff13,spawn,   SHCMD("amixer sset Master 5%+ ") },
+  { 0,           0x1008ff03,spawn,   SHCMD("sudo xbacklight -dec 5") },
+  { 0,           0x1008ff02,spawn,   SHCMD("sudo xbacklight -inc 5") },
 };
 
 /* button definitions */
