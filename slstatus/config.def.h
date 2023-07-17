@@ -70,11 +70,11 @@ static const struct arg args[] = {
   { netspeed_rx,         "󰇚  %sB | ",           "wlp44s0"},
   { wifi_essid, "\uf1eb  %s | ", "wlp44s0"},
   /*{ ipv4        ,"%s | ", "wlp44s0"},*/
-  { battery_perc        ,"󱊣 %s | ", "BAT0"},
   // {cpu_freq, "\uf4bc  %sHz | ", NULL},
   // {temp, "%s 󰔄 | ", "/sys/class/thermal/thermal_zone0/temp"},
-  { run_command, "\uf027 %s | ", "amixer sget Master | awk -F \"[][]\" '/Left:/{print $2}'" },
-  { run_command, "󰍹  %s | ", "xbacklight -get" },
   { run_command, " %s | ", "bluetooth | awk '{print $3}'" },
+  { run_command, "󰍹  %s | ", "xbacklight -get" },
+  { run_command, "\uf027 %s | ", "amixer sget Master | awk -F \"[][]\" '/Left:/{print $2}'" },
+  { battery_perc        ,"󱊣 %s | ", "BAT0"},
 	{ datetime, "%s",           "%F %a %T" },
 };
