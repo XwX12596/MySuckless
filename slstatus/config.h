@@ -66,12 +66,12 @@ static const char unknown_str[] = "n/a";
 static const struct arg args[] = {
 	/* function format          argument */
 	 /*{ uptime,         "%s | ",           NULL},*/
-  { netspeed_tx,         "| 󰕒  %sB | ",           "wlp44s0"},
-  { netspeed_rx,         "󰇚  %sB | ",           "wlp44s0"},
+  { netspeed_rx,         "| 󰇚  %sB | ",           "enp0s31f6"},
   { wifi_essid, "\uf1eb  %s | ", "wlp44s0"},
   /*{ ipv4        ,"%s | ", "wlp44s0"},*/
   // {cpu_freq, "\uf4bc  %sHz | ", NULL},
   // {temp, "%s 󰔄 | ", "/sys/class/thermal/thermal_zone0/temp"},
+  { run_command, "󰈀  %s | ", "ip link | grep enp0s31f6 | awk '{print $9}'"},
   { run_command, " %s | ", "bluetooth | awk '{print $3}'" },
   { run_command, "󰍹  %s | ", "xbacklight -get" },
   { run_command, "\uf027 %s | ", "get-volume" },

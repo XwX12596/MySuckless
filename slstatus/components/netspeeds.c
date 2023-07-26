@@ -14,6 +14,8 @@
 	const char *
 	netspeed_rx(const char *interface)
 	{
+    char *getInterface_cmd = "ip route get 8.8.8.8 2>/dev/null|grep 8.8.8.8| awk '{print $5}'";
+    interface = run_command(getInterface_cmd);
 		uintmax_t oldrxbytes;
 		static uintmax_t rxbytes;
 		extern const unsigned int interval;
