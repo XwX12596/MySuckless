@@ -74,8 +74,7 @@ static const struct arg args[] = {
   // {temp, "%s 󰔄 | ", "/sys/class/thermal/thermal_zone0/temp"},
   { run_command, " %s | ", "bluetooth | awk '{print $3}'" },
   { run_command, "󰍹  %s | ", "xbacklight -get" },
-  // { run_command, "\uf027 %s | ", "pamixer --get-volume-human" },
-  { vol_perc, "\uf027 %s | ", "/dev/mixer" },
+  { run_command, "\uf027 %s | ", "get-volume" },
   { battery_perc        ,"󱊣 %s | ", "BAT0"},
 	{ datetime, "%s",           "%F %a %T" },
 };
