@@ -124,9 +124,9 @@ static const Key keys[] = {
     TAGKEYS(XK_5, 4) TAGKEYS(XK_6, 5) TAGKEYS(XK_7, 6) TAGKEYS(XK_8, 7)
     TAGKEYS(XK_9, 8)
     {MODKEY | ShiftMask, XK_q, quit, {0}},
-    {0, 0x1008ff12, spawn, SHCMD("amixer sset Master toggle")},
-    {0, 0x1008ff11, spawn, SHCMD("amixer sset Master 5%- ")},
-    {0, 0x1008ff13, spawn, SHCMD("amixer sset Master 5%+ ")},
+    {0, 0x1008ff12, spawn, SHCMD("toggle-mute")},
+    {0, 0x1008ff11, spawn, SHCMD("set-volume -")},
+    {0, 0x1008ff13, spawn, SHCMD("set-volume +")},
     {0, 0x1008ff03, spawn, SHCMD("sudo xbacklight -dec 5")},
     {0, 0x1008ff02, spawn, SHCMD("sudo xbacklight -inc 5")},
 };
