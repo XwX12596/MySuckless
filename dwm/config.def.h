@@ -41,9 +41,10 @@ static const Rule rules[] = {
     {"chrome", NULL, NULL, 1 << 2, 0, -1},
     {"QQ", NULL, NULL, 1 << 7, 1, -1},
     {"mpv", NULL, NULL, 1 << 1, 1, -1},
-    {"qbittorrent", NULL, NULL, 1 << 8, 0, -1},
+    {"qBittorrent", NULL, NULL, 1 << 8, 0, -1},
     {"steam", NULL, NULL, 1 << 3, 1, -1},
     {"R3PLAY", NULL, NULL, 1 << 4, 0, -1},
+    {"neovide", NULL, NULL, 0, 1, -1},
 };
 
 /* layout(s) */
@@ -63,6 +64,7 @@ static const Layout layouts[] = {
 
 /* key definitions */
 #define MODKEY Mod1Mask
+#define MODKEY_win Mod4Mask
 #define TAGKEYS(KEY, TAG)                                                      \
   {MODKEY, KEY, view, {.ui = 1 << TAG}},                                       \
       {MODKEY | ControlMask, KEY, toggleview, {.ui = 1 << TAG}},               \
@@ -93,6 +95,7 @@ static const Key keys[] = {
     /* modifier                     key        function        argument */
     {MODKEY | ShiftMask, XK_s, spawn, {.v = flameshotcmd}},
     {MODKEY, XK_p, spawn, {.v = dmenucmd}},
+    {MODKEY, XK_v, spawn, SHCMD("clipmenu")},
     {MODKEY | ShiftMask, XK_Return, spawn, {.v = termcmd}},
     {MODKEY, XK_grave, togglescratch, {.v = scratchpadcmd}},
     {MODKEY, XK_b, togglebar, {0}},
@@ -118,8 +121,9 @@ static const Key keys[] = {
     {MODKEY | ShiftMask, XK_comma, tagmon, {.i = -1}},
     {MODKEY | ShiftMask, XK_period, tagmon, {.i = +1}},
     TAGKEYS(XK_1, 0) TAGKEYS(XK_2, 1) TAGKEYS(XK_3, 2) TAGKEYS(XK_4, 3)
-        TAGKEYS(XK_5, 4) TAGKEYS(XK_6, 5) TAGKEYS(XK_7, 6) TAGKEYS(XK_8, 7)
-            TAGKEYS(XK_9, 8){MODKEY | ShiftMask, XK_q, quit, {0}},
+    TAGKEYS(XK_5, 4) TAGKEYS(XK_6, 5) TAGKEYS(XK_7, 6) TAGKEYS(XK_8, 7)
+    TAGKEYS(XK_9, 8)
+    {MODKEY | ShiftMask, XK_q, quit, {0}},
     {0, 0x1008ff12, spawn, SHCMD("amixer sset Master toggle")},
     {0, 0x1008ff11, spawn, SHCMD("amixer sset Master 5%- ")},
     {0, 0x1008ff13, spawn, SHCMD("amixer sset Master 5%+ ")},
