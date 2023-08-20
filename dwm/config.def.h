@@ -44,6 +44,8 @@ static const Rule rules[] = {
     {"qBittorrent", NULL, NULL, 1 << 8, 0, -1},
     {"steam", NULL, NULL, 1 << 3, 1, -1},
     {"R3PLAY", NULL, NULL, 1 << 4, 0, -1},
+    {"Prism Launcher", NULL, NULL, 1 << 5, 1, -1},
+    {"Minecraft", NULL, NULL, 1 << 1, 0, -1},
     {"neovide", NULL, NULL, 0, 1, -1},
 };
 
@@ -83,7 +85,7 @@ static char dmenumon[2] =
 static const char *dmenucmd[] = {
     "dmenu_run", "-m",      dmenumon, "-fn",    dmenufont, "-nb",     col_gray1,
     "-nf",       col_gray3, "-sb",    col_cyan, "-sf",     col_gray4, NULL};
-static const char *termcmd[] = {"st", NULL};
+static const char *termcmd[] = {"kitty", NULL};
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = {"st", "-t",     scratchpadname,
                                       "-g", "120x34", NULL};
