@@ -44,9 +44,8 @@ static const Rule rules[] = {
     {"qBittorrent", NULL, NULL, 1 << 8, 0, -1},
     {"steam", NULL, NULL, 1 << 3, 1, -1},
     {"R3PLAY", NULL, NULL, 1 << 4, 0, -1},
-    {"Prism Launcher", NULL, NULL, 1 << 5, 1, -1},
-    {"Minecraft", NULL, NULL, 1 << 1, 0, -1},
-    {"neovide", NULL, NULL, 0, 1, -1},
+    {"Prism Launcher", NULL, NULL, 1 << 4, 1, -1},
+    {"Minecraft", NULL, NULL, 1 << 5, 0, -1},
 };
 
 /* layout(s) */
