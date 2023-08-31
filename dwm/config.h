@@ -40,6 +40,7 @@ static const Rule rules[] = {
     /* class      instance    title       tags mask     isfloating   monitor */
     {"chrome", NULL, NULL, 1 << 2, 0, -1},
     {"QQ", NULL, NULL, 1 << 7, 1, -1},
+    {"xfce4-panel", NULL, NULL, 1 << 7, 1, -1},
     {"mpv", NULL, NULL, 1 << 1, 1, -1},
     {"qBittorrent", NULL, NULL, 1 << 8, 0, -1},
     {"steam", NULL, NULL, 1 << 3, 1, -1},
